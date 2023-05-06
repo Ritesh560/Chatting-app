@@ -19,7 +19,7 @@ const Chat = () => {
   const [users, setUsers] = useState("")
   const [message, setMessage] = useState("")
   const [messages, setMessages] = useState([])
-  const ENDPOINT = "https://react-socke-chat-app.herokuapp.com/"
+  const ENDPOINT = process.env.REACT_APP_BACKEND_URL
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search)
